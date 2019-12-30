@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Recipes</title>
+    <link rel="stylesheet" type="text/css" href="/utils/css/recipes.css"
+</head>
+
+<style>
+    body, html {
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    flex-direction: column;
+    display: flex;
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 0 16px;
+    min-height: 100vh;
+}
+
+</style>
+
+
+<body>
+    <div class="recipes-page-content">
+        {{>header}}
+        {{#each recipes}}
+            <br />
+            <h3>{{label}}</h3>
+            <h4>Ingredients:</h4>
+            {{#each ingredients}}
+                <p>{{this}}</p>
+            {{/each}}
+            <u>Recipe: </u>
+            <a href="{{url}}">
+                {{url}}
+            <a />
+            <br />
+        {{/each}}
+    </div>
+
+    {{>footer}}
+</body>
+
+</html>
