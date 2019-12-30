@@ -11,6 +11,7 @@ const port = process.env.PORT || 3000;
 app.set('view engine', 'hbs');
 hbs.registerPartials(path.join(__dirname, 'views/partials'))
 app.use(express.static(path.join(__dirname, 'views')));
+app.use(express.static(path.join(__dirname, 'assets')));
 
 app.use(bodyParser.urlencoded({ extended: false }));
 
